@@ -1,2 +1,12 @@
-<p>palettes works!</p>
-<button (click)="getModels()">GET /products</button>
+<button (click)="showColors()">Show Colors</button>
+
+<div class="paletts-wrapper">
+    <div class="colors">
+        @for(color of colors; track color){
+            <div class="color-item">
+                <div class="color-box" [style.backgroundColor]="color"></div>
+                <p class="color-value">{{color}}</p>
+            </div>
+        }
+    </div>
+</div>
