@@ -15,7 +15,11 @@ export class PalettesComponent {
 this.getPaletteModels.getPaletteModels();
   }
 
-  getLocalStorageColors(){
+  updateLocalStorageColors(){
+    if(localStorage.getItem(`color0`) === this.colors[0]){
+      return;
+    }
+    this.colors= [];
     for (let i = 0; i < 5; i++) {
       const color = localStorage.getItem(`color${i}`);
       this.colors.push(color || '#ffffff');
@@ -24,6 +28,7 @@ this.getPaletteModels.getPaletteModels();
 
   showColors(){
     this.getModels();
-    this.getLocalStorageColors();
+    this.updateLocalStorageColors();
   }
+  
 }

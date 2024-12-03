@@ -7,12 +7,24 @@ import { Injectable } from '@angular/core';
 export class GetColorPalettesService {
 
 private apiUrl: string = 'https://www.thecolorapi.com/';
-private UrlParameters: string = 'scheme?hex=ff0000&mode=monochrome';
+
 
   constructor(private http: HttpClient) { }
 
+  getRandomHexColorCode(): string {
+    const letters = '0123456789ABCDEF';
+    let hexColorCode = '';
+    for (let i = 0; i < 6; i++) {
+      hexColorCode += letters[Math.floor(Math.random() * 16)];
+    }
+    return hexColorCode;
+  }
+  
   async getPaletteModels(){
-    this.http.get<{ [key: string]: any[] }>(this.apiUrl + this.UrlParameters).subscribe(response => {
+    const hexColor:string = this.getRandomHexColorCode();
+    const UrlParameters: string = `scheme?hex=${hexColor}&mode=monochrome`;
+
+    this.http.get<{ [key: string]: any[] }>(this.apiUrl + UrlParameters).subscribe(response => {
       const data = response;
       console.log(data["colors"]);
       localStorage.setItem("color0", data["colors"]["0"]["hex"]["value"]);

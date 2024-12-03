@@ -35,3 +35,28 @@
 .color-value {
   color: #333;
 }
+
+.show-colors-button {
+  background-color: #0c0c0c;
+  color: #fff;
+  border: #f9f9f9;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-bottom: 20px;
+}
+
+.show-colors-button:hover {
+  background-color: #eeeeee;
+  color: #000;
+  border: #101010;
+  transform: translateY(-2px);
+}
+
+.show-colors-button:active {
+  background-color: #100040;
+  color: #00ffff;
+}
