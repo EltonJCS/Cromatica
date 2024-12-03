@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { PalettesComponent } from './components/palettes/palettes.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, PalettesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
