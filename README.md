@@ -16,7 +16,7 @@ Cromatica é um site que permite a geração de paletas de cores. A aplicação 
 
 - **Angular**: Framework para a construção da interface da aplicação.
 - **CSS3**: Utilizado na estilização da interface.
-- **TheColorAPI**: API externa utilizada para fornecer informações sobre as paletas de cores.
+- **TheColorAPI**: API externa utilizada para fornecer as paletas de cores e suas informações.
 
 <hr>
 <p align="center">Feito com ☕ por <a href="https://github.com/eltonjcs">EltonJCS</a></p>
