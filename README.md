@@ -1,59 +1,23 @@
-# Cromatica
+<div align="center">
+  <h1><b>Cromatica</b></h1>
+  <a href="https://eltonjcs.github.io/Cromatica/">
+    <p><b>Visualização ao vivo | <i>Live preview</i></b></p>
+  </a>
+</div>
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+Cromatica é um site que permite a geração de paletas de cores. A aplicação utiliza a API **TheColorAPI** para obter informações sobre as cores. Os usuários podem clicar em um botão para gerar uma nova paleta de cores.
 
-## Development server
+## Funcionalidades
 
-To start a local development server, run:
+- **Geração de Paletas de Cores**: O usuário pode gerar uma paleta de cores.
+- **Gradiente de Fundo Animado**: O fundo da aplicação possui um gradiente que se move lentamente, possibilitando a melhor visualização das cores em fundos com luminosidades diferentes.
 
-```bash
-ng serve
-```
+## Tecnologias Utilizadas
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Angular**: Framework para a construção da interface da aplicação.
+- **CSS3**: Utilizado na estilização da interface.
+- **TheColorAPI**: API externa utilizada para fornecer as paletas de cores e suas informações.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<hr>
+<p align="center">Feito com ☕ por <a href="https://github.com/eltonjcs">EltonJCS</a></p>
+<div align="center"><a href="https://github.com/eltonjcs"><img src="https://raw.githubusercontent.com/EltonJCS/assets/main/SVGs/Logos/EJCS/EJ_Light%202.svg" alt="EltonJCS" width="100px"></a></div>
