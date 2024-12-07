@@ -1,7 +1,16 @@
 /* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    background: linear-gradient(90deg, #000, #500014, #502896, #a078c8,#fff);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #000, #500014, #502896, #a078c8,#fff);
   background-size: 500% 500%;
   animation: gradientMove 8s ease-in-out infinite;
 }
