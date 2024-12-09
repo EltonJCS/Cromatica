@@ -11,12 +11,16 @@ export class PalettesComponent {
   private getPaletteModels = inject(GetColorPalettesService);
   colors: string[] = [];
 
-  getModels(){
-this.getPaletteModels.getPaletteModels();
+  ngOnInit(){
+    this.updateLocalStorageColors();
+  }
+
+  async getModels(){
+    await this.getPaletteModels.getPaletteModels();
   }
 
   updateLocalStorageColors(){
-    if(localStorage.getItem(`color0`) === this.colors[0]){
+    if(localStorage.getItem(`color0`) === (this.colors[0] || '#ffffff')){
       return;
     }
     this.colors= [];
@@ -26,8 +30,8 @@ this.getPaletteModels.getPaletteModels();
     }
   }
 
-  showColors(){
-    this.getModels();
+  async showColors(){
+    await this.getModels();
     this.updateLocalStorageColors();
   }
   

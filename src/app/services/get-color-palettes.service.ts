@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -24,14 +25,14 @@ private apiUrl: string = 'https://www.thecolorapi.com/';
     const hexColor:string = this.getRandomHexColorCode();
     const UrlParameters: string = `scheme?hex=${hexColor}&mode=monochrome`;
 
-    this.http.get<{ [key: string]: any[] }>(this.apiUrl + UrlParameters).subscribe(response => {
+    try {
+      const response = await firstValueFrom(this.http.get<{ [key: string]: any[] }>(this.apiUrl + UrlParameters));
       const data = response;
-      console.log(data["colors"]);
-      localStorage.setItem("color0", data["colors"]["0"]["hex"]["value"]);
-      localStorage.setItem("color1", data["colors"]["1"]["hex"]["value"]);
-      localStorage.setItem("color2", data["colors"]["2"]["hex"]["value"]);
-      localStorage.setItem("color3", data["colors"]["3"]["hex"]["value"]);
-      localStorage.setItem("color4", data["colors"]["4"]["hex"]["value"]);
-    });
+      for (let i = 0; i < data["colors"].length; i++) {
+        localStorage.setItem(`color${i}`, data["colors"][`${i}`]["hex"]["value"]);
+      }
+    } catch (error) {
+      console.error('Error fetching color data:', error);
+    }
   }
 }
