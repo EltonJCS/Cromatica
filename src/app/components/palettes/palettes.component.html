@@ -1,15 +1,15 @@
 <div id="palettes-container">
-    <button  class="show-colors-button" (click)="showColors()">Generate Colors</button>
-    <div class="paletts-wrapper">
-        <div class="colors">
-            @if (colors[0] != '#ffffff') {
-                @for(color of colors; track color){
-                    <div class="color-item">
-                        <div class="color-box" [style.backgroundColor]="color"></div>
-                        <p class="color-value">{{color}}</p>
-                    </div>
-                }
-            }
-        </div>
+  <button class="show-colors-button" (click)="showColors()">
+    Generate Colors
+  </button>
+  <div class="paletts-wrapper">
+    <div class="colors">
+      @if (colors[0] != '#ffffff') { @for(color of colors; track color){
+      <div class="color-item">
+        <div class="color-box" [style.backgroundColor]="color"></div>
+        <p class="color-value">{{ color }}</p>
+      </div>
+      } }
     </div>
+  </div>
 </div>
