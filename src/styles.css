@@ -12,7 +12,7 @@ body {
   align-items: center;
   background: linear-gradient(90deg, #000, #500014, #502896, #a078c8, #fff);
   background-size: 500% 500%;
-  animation: gradientMove 8s ease-in-out infinite;
+  animation: gradientMove 12s ease-in-out infinite;
 }
 @keyframes gradientMove {
   0% {
