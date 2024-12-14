@@ -1,16 +1,16 @@
 <div align="center">
   <h1><b>Cromatica</b></h1>
   <a href="https://eltonjcs.github.io/Cromatica/">
-    <p><b>Visualização ao vivo | <i>Live preview</i></b></p>
+    <p><b>Pré-visualização ao vivo | <i>Live preview</i></b></p>
   </a>
 </div>
 
-Cromatica é um site que permite a geração de paletas de cores. A aplicação utiliza a API **TheColorAPI** para obter informações sobre as cores. Os usuários podem clicar em um botão para gerar uma nova paleta de cores.
+Cromatica é um site que permite a geração de paletas de cores. A aplicação utiliza a API **TheColorAPI** para obter informações sobre as cores.
 
 ## Funcionalidades
 
 - **Geração de Paletas de Cores**: O usuário pode gerar uma paleta de cores.
-- **Gradiente de Fundo Animado**: O fundo da aplicação possui um gradiente que se move lentamente, possibilitando a melhor visualização das cores em fundos com luminosidades diferentes.
+- **Gradiente de Fundo Animado**: O fundo da aplicação possui um gradiente que se move lentamente, possibilitando a melhor visualização das cores em fundos com luminosidade e contraste diferentes.
 
 ## Tecnologias Utilizadas
 
